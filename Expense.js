@@ -4,10 +4,10 @@ let totalIncome = parseFloat(localStorage.getItem("income") || 0.0);
 let totalSaving = parseFloat(localStorage.getItem("saving") || 0.0);
 
 
-document.getElementById("total-balance").innerHTML = "Rs" + total.toFixed(2);
-document.getElementById("total-expenses").innerHTML = "Rs" + totalExpense.toFixed(2);
-document.getElementById("total-income").innerHTML = "Rs" + totalIncome.toFixed(2);
-document.getElementById("total-savings").innerHTML = "Rs" + totalSaving.toFixed(2);
+document.getElementById("total-balance").innerHTML = "Rs " + total.toFixed(2);
+document.getElementById("total-expenses").innerHTML = "Rs " + totalExpense.toFixed(2);
+document.getElementById("total-income").innerHTML = "Rs " + totalIncome.toFixed(2);
+document.getElementById("total-savings").innerHTML = "Rs " + totalSaving.toFixed(2);
 
 
 document.getElementById("add-transaction").addEventListener("click", function () {
@@ -72,10 +72,10 @@ let update = function () {
     localStorage.setItem("expenses", totalExpense);
     localStorage.setItem("income", totalIncome);
     localStorage.setItem("saving", totalSaving);
-    document.getElementById("total-balance").innerHTML = "Rs" + total.toFixed(2);
-    document.getElementById("total-expenses").innerHTML = "Rs" + totalExpense.toFixed(2);
-    document.getElementById("total-income").innerHTML = "Rs" + totalIncome.toFixed(2);
-    document.getElementById("total-savings").innerHTML = "Rs" + totalSaving.toFixed(2);
+    document.getElementById("total-balance").innerHTML = "Rs " + total.toFixed(2);
+    document.getElementById("total-expenses").innerHTML = "Rs " + totalExpense.toFixed(2);
+    document.getElementById("total-income").innerHTML = "Rs " + totalIncome.toFixed(2);
+    document.getElementById("total-savings").innerHTML = "Rs " + totalSaving.toFixed(2);
     document.getElementById("description").value = "";
     document.getElementById("amount").value = "";
     document.getElementById("transaction-type").value = "";
@@ -104,5 +104,30 @@ let myChart=new Chart(ctx,{
         }
     }
 );
+window.onload = function(){
+let x=localStorage.getItem("username");
+if (x==null){
+    let username=prompt("Whats your good name?")
+    localStorage.setItem("username",username)
+}
+x=localStorage.getItem("username");
+    document.getElementById("Username").innerHTML=x.toUpperCase();
+}
+document.getElementById("Signout").onclick=function(){
+    if(confirm("Are you sure you wish to sign out?")){
+        localStorage.removeItem("username");
+        total=0.0;
+    totalIncome=0.0;
+    totalExpense=0.0;
+    totalSaving=0.0;
+    document.getElementById("Username").innerHTML=" ";
+    update();
+    let username=prompt("Whats your good name?")
+    localStorage.setItem("username",username)
+    x=localStorage.getItem("username");
+    document.getElementById("Username").innerHTML=x.toUpperCase();
+    }
+}
+
 
 
