@@ -1,0 +1,47 @@
+body{
+    background-color: rgba(15, 19, 32);
+}
+
+body{
+    color: aliceblue;
+}
+#transaction-type{
+    color: rgba(16, 16, 16, 0.343);
+}
+.container{ 
+    border-radius: 5%;
+    width: 20vw;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid;
+    padding:10px;
+    margin: 15px 5px;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+}
+#container1{
+background-color: rgba(17, 26, 45);
+border-color:rgb(29, 37, 53);
+}
+#container2{
+background-color: rgba(29, 22, 38);
+border-color:rgb(35, 30, 42);
+}
+#container3{
+background-color: rgba(22, 35, 41);
+border-color:rgb(32, 41, 46);
+}
+#container4{
+background-color: rgba(33, 31, 35);
+border-color:rgb(35, 34, 35);
+}
+
+.amt{
+    font-size: larger;
+}
+.desc{
+    font-size: smaller;
+}
+

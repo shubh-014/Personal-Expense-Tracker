@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Expense Tracker</title>
+</head>
+<body>
+    
+    <h1> Financial Dashboard</h1>
+    <h3> Overview for all time</h3>
+    <div id="container">
+
+        <div id="container1" class="container">
+            <div id="total-balance" class="amt"></div>
+            <div class="desc"> total balance </div>
+        </div>
+        <div id="container2" class="container">
+            <div id="total-expenses" class="amt"></div>
+            <div class="desc"> total expenses</div>
+        </div>
+        
+        <div id="container3" class="container">
+            <div id="total-income" class="amt"></div>
+            <div class="desc"> total income</div>
+        </div>
+        
+        <div id="container4" class="container">
+            <div id="total-savings" class="amt"></div>
+            <div class="desc"> total savings</div>
+        </div>
+        
+    </div>
+    <div id="transaction-form">
+        <input type="text" id="description" placeholder="Description">
+        <input type="number" id="amount" placeholder="Amount">
+        <select id="transaction-type">
+            <option value="">select</option>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+            <option value="Saving">Saving</option>
+        </select>
+        <button id="add-transaction">Add Transaction</button>
+        <button id="reset">Reset Past Records</button>
+        <canvas id="chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="Expense.css"></script>
+    <script src="Expense.js"></script>
+</body>
+</html>
