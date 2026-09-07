@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Expense Tracker</title>
+
+</head>
+
+<body>
+
+
+    <div class="page">
+        <div id="navbar">
+            <div id="navcontain">
+                <div id="title">
+                    <svg width="200" height="45" viewBox="0 0 200 45" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#5145ff" />
+                                <stop offset="100%" stop-color="#1688ee" />
+                            </linearGradient>
+
+                            <linearGradient id="textBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#55d9ff" />
+                                <stop offset="100%" stop-color="#4d7cff" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Logo icon -->
+                        <rect x="2" y="40" width="39" height="39" rx="9" fill="url(#logoBlue)" />
+
+                        <!-- Bars -->
+                        <rect x="11" y="25" width="5" height="11" rx="1.5" fill="white" />
+                        <rect x="18" y="20" width="5" height="16" rx="1.5" fill="white" />
+                        <rect x="25" y="15" width="5" height="21" rx="1.5" fill="white" />
+
+                        <!-- Growth line -->
+
+                        <polyline points="10,18 17,13 20,16 31,6" fill="none" stroke="white" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+
+
+
+                        <!-- Arrow -->
+                        <polyline points="26,6 31,6 31,11" fill="none" stroke="white" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+
+
+
+                        <!-- Text -->
+                        <text x="50" y="29" font-family="Arial, sans-serif" font-size="18" font-weight="700"
+                            fill="url(#textBlue)">
+                            Expense Tracker
+                        </text>
+                    </svg>
+                </div>
+
+
+                <!-- NavItems -->
+                <a href="index.html" class="nav-item n1">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="6" height="6" rx="1" />
+                        <rect x="14" y="4" width="6" height="6" rx="1" />
+                        <rect x="4" y="14" width="6" height="6" rx="1" />
+                        <rect x="14" y="14" width="6" height="6" rx="1" />
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="Transactions.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="4" y="4" width="16" height="17" rx="2" />
+                        <path d="M8 8h8" />
+                        <path d="M8 12h8" />
+                        <path d="M8 16h5" />
+                    </svg>
+                    <span>Transactions</span>
+                </a>
+                <a href="Categories.html" class="nav-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 6h7l2 2h9v11H3z" />
+                        <path d="M3 6v-1h7l2 2" />
+                    </svg>
+                    <span>Categories</span>
+                </a>
+                <div class="Navfooter">
+                    <div id="Username"></div>
+                    <div id="sign">Designed by Shubh</div>
+                </div>
+            </div>
+        </div>
+        <!-- Content -->
+
+        <div id="content">
+            <div id="headings">
+                <h1>Past Transactions</h1>
+                <h2>View all your Income, Expenses and Savings</h2>
+            </div>
+            <div id="body">
+                
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Sn No</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                    </tbody>
+                </table>
+                <div id="None">
+                    <span>
+                        No transactions yet
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<link rel="stylesheet" href="Expense.css">
+<link rel="stylesheet" href="Transactions.css">
+<script src="Expense.js"></script>
+<script src="Transactions.js"></script>
+<script src="username.js"></script>
+
+</html>

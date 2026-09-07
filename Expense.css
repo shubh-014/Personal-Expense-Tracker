@@ -34,7 +34,8 @@ h1{
     font-size: xx-large;
 }
 h2{
-    font-size: smaller;
+    padding-top: 10px;
+    font-size: 20px;
     opacity: 60%;
 }
 
@@ -57,7 +58,6 @@ body {
 
     min-width: 0;
 
-    margin: 20px;
     margin: 20px;
 
     display: flex;
@@ -89,6 +89,8 @@ body {
     align-items: center;
     gap: 12px;
     padding:18px 10px;
+    color: white;
+    text-decoration:none;
    
 }
 .n1{
@@ -138,9 +140,6 @@ body {
     /* transform: scale(.5); */
 }
 
-#transaction-type {
-    color: rgba(16, 16, 16, 0.343);
-}
 
 .container {
     width: auto;
@@ -222,6 +221,16 @@ body {
     border-radius: 10px;
     box-sizing: border-box;
 }
+#DashFooter{
+    margin: 10px 0px;
+    width: auto;
+    height: 400px;
+    padding: 10px;
+    background-color: #0e192b;
+    border: 1px solid #1d2c43;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
 
 
 .transaction-title {
@@ -295,12 +304,13 @@ body {
 }
 
 .input-box select {
+    color: #69778d;
     width: 100%;
     height: 100%;
     border: none;
     outline: none;
     background: transparent;
-    color: #e8edf5;
+    padding-left: 20px;
     font-size: 10px;
     appearance: none;
 }
@@ -419,11 +429,24 @@ body {
     width: 300px;
     height: 300px;
 }
-
-@media (max-width: 768px) {
-
+#body{
+width: auto;
+    height: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+    background-color: #0e192b;
+    border: 1px solid #1d2c43;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+@media (max-width: 790px) {
+    .container{
+    height: 124px;}
     #dashboard-bottom {
         grid-template-columns: 1fr;
+    }
+    #navbar{
+        height: 100%;
     }
 
     #transaction-form,

@@ -14,15 +14,27 @@ document.getElementById("add-transaction").addEventListener("click", function ()
     let transactionName = document.getElementById("description").value;
     let transactionAmount = parseFloat(document.getElementById("amount").value);
     let transactionType = document.getElementById("transaction-type").value;
+    if(transactionName===""){
+        alert("Enter Description");return;
+    }
     if (transactionAmount < 0) { alert("Amount can't be negative"); return; }
     if (isNaN(transactionAmount)) {
         alert("Enter amount");
         return;
     }
-    if (transactionType === "select") { alert("Enter Transaction Type") }
+    if (transactionType === "") { alert("Enter Transaction Type") }
     else if (transactionType === "Expense") { expense(transactionAmount) }
     else if (transactionType === "Income") { income(transactionAmount) }
     else saving(transactionAmount);
+
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    let transaction = {
+    description: transactionName,
+    amount: transactionAmount,
+    type: transactionType
+};
+transactions.push(transaction);
+localStorage.setItem("transactions", JSON.stringify(transactions));
 
 });
 document.getElementById("reset").addEventListener("click", function () {
@@ -31,6 +43,7 @@ document.getElementById("reset").addEventListener("click", function () {
     totalExpense = 0.0;
     totalSaving = 0.0;
     update();
+    localStorage.removeItem("transactions");
 });
 
 let expense = function (transactionAmount) {
@@ -121,46 +134,10 @@ let myChart = new Chart(ctx, {
         }
     }
 });
-window.onload = function () {
-    let x = localStorage.getItem("username");
-    if (x == null) {
-        let username = prompt("Whats your good name?")
-        localStorage.setItem("username", username)
-    }
-    x = localStorage.getItem("username");
-    document.getElementById("Username").innerHTML = x.toUpperCase();
-}
-document.getElementById("Signout").onclick = function () {
-    if (confirm("Are you sure you wish to sign out?")) {
-        localStorage.removeItem("username");
-        total = 0.0;
-        totalIncome = 0.0;
-        totalExpense = 0.0;
-        totalSaving = 0.0;
-        document.getElementById("Username").innerHTML = " ";
-        update();
-        let username = prompt("Whats your good name?")
-        localStorage.setItem("username", username)
-        x = localStorage.getItem("username");
-        document.getElementById("Username").innerHTML = x.toUpperCase();
-    }
-}
 
-const navitems = document.querySelectorAll(".nav-item");
+document.getElementById("n2").onclick = function() {
+   document.getElementById("content").innerHTML=" ";
+};
 
-navitems.forEach(function (item) {
-
-    item.addEventListener("click", function () {
-
-        navitems.forEach(function (nav) {
-
-            nav.classList.remove("active");
-
-        });
-        item.classList.add("active");
-
-    });
-
-});
 
 

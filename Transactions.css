@@ -1,0 +1,23 @@
+#None{
+    display: none;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#table th{
+    text-align: left;
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #1d2c43;
+
+}
+#data td{
+    text-align: left;
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #1d2c43;
+}

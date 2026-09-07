@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +59,7 @@
 
 
                 <!-- NavItems -->
-                <div class="nav-item active n1">
+                <a href="index.html" class="nav-item active n1">
                     <svg viewBox="0 0 24 24">
                         <rect x="4" y="4" width="6" height="6" rx="1" />
                         <rect x="14" y="4" width="6" height="6" rx="1" />
@@ -68,9 +67,9 @@
                         <rect x="14" y="14" width="6" height="6" rx="1" />
                     </svg>
                     <span>Dashboard</span>
-                </div>
+                </a>
 
-                <div class="nav-item">
+                <a href="Transactions.html" class="nav-item">
                     <svg viewBox="0 0 24 24">
                         <rect x="4" y="4" width="16" height="17" rx="2" />
                         <path d="M8 8h8" />
@@ -78,14 +77,14 @@
                         <path d="M8 16h5" />
                     </svg>
                     <span>Transactions</span>
-                </div>
-                <div class="nav-item">
+                </a>
+                <a href="Categories.html" class="nav-item">
                     <svg viewBox="0 0 24 24">
                         <path d="M3 6h7l2 2h9v11H3z" />
                         <path d="M3 6v-1h7l2 2" />
                     </svg>
                     <span>Categories</span>
-                </div>
+                </a>
                 <div class="Navfooter">
                     <div id="Username"></div>
                     <div id="sign">Designed by Shubh</div>
@@ -200,7 +199,7 @@
                     <div class="input-box">
                         <!-- your type SVG -->
                         <select id="transaction-type">
-                            <option value="">select</option>
+                            <option value="">Select tranasction type</option>
                             <option value="Income">Income</option>
                             <option value="Expense">Expense</option>
                             <option value="Saving">Saving</option>
@@ -232,12 +231,15 @@
                     </div>
                 </div>
             </div>
+            <div id="DashFooter">
+
+            </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <link rel="stylesheet" href="Expense.css">
-        <script src="nav.js"></script>
-        <script src="Expense.js"></script>
-</body>
+    </body>
+    <link rel="stylesheet" href="Expense.css">
+    <script src="Expense.js"></script>
+    <script src="username.js"></script>
 
 </html>
