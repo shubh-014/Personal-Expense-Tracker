@@ -14,10 +14,10 @@
 
 <body>
 
-
     <div class="page">
         <div id="navbar">
             <div id="navcontain">
+
                 <div id="title">
                     <svg width="200" height="45" viewBox="0 0 200 45" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -63,7 +63,8 @@
 
 
                 <!-- NavItems -->
-                <a href="index.html" class="nav-item n1">
+
+                <a href="index.html" class="nav-item  n1">
                     <svg viewBox="0 0 24 24">
                         <rect x="4" y="4" width="6" height="6" rx="1" />
                         <rect x="14" y="4" width="6" height="6" rx="1" />
@@ -73,7 +74,7 @@
                     <span>Dashboard</span>
                 </a>
 
-                <a href="Transactions.html" class="nav-item ">
+                <a href="Transactions.html" class="nav-item">
                     <svg viewBox="0 0 24 24">
                         <rect x="4" y="4" width="16" height="17" rx="2" />
                         <path d="M8 8h8" />
@@ -82,7 +83,7 @@
                     </svg>
                     <span>Transactions</span>
                 </a>
-                <a href="Categories.html" class="nav-item active">
+                <a href="Categories.html" class="nav-item active last">
                     <svg viewBox="0 0 24 24">
                         <path d="M3 6h7l2 2h9v11H3z" />
                         <path d="M3 6v-1h7l2 2" />
@@ -90,68 +91,124 @@
                     <span>Categories</span>
                 </a>
                 <div class="Navfooter">
-                    <div id="Username"></div>
+                    <div id="mobile-buttons">
+
+                        <button id="mobile-reset">
+
+                            <div class="mobile-action-icon reset-icon">
+                                🗑
+                            </div>
+
+                            <div class="mobile-action-text">
+                                <div>Clear Past Records</div>
+
+                            </div>
+
+                            <div class="mobile-action-arrow">›</div>
+
+                        </button>
+
+
+                        <button id="mobile-signout">
+
+                            <div class="mobile-action-icon signout-icon">
+                                ⇥
+                            </div>
+
+                            <div class="mobile-action-text">
+                                <div>Sign out</div>
+
+                            </div>
+
+                            <div class="mobile-action-arrow">›</div>
+
+                        </button>
+
+                    </div>
+
+                    <div id="Username">
+
+                        <div id="user-avatar"></div>
+
+                        <div id="user-info">
+
+                            <div id="user-name"></div>
+
+                            <div id="user-role">Expense Tracker User</div>
+
+                        </div>
+
+                    </div>
+
                     <div id="sign">Designed by Shubh</div>
+
                 </div>
             </div>
-              <div id="navbar-overlay"></div>
+
+        </div>
+        <div id="navbar-overlay">
+
         </div>
         <!-- Content -->
 
         <div id="content">
             <div id="headings">
-                <h1>Categories</h1>
-                <h2>View your spending, income or saving by category</h2>
-            </div>
-            <div id="buttons">
+                <div>
+
+                    <h1>Categories</h1>
+                    <h2>View your spending, income or saving by category</h2>
+                </div>
+                <div id="buttons">
                     <button id="menu-button">☰</button>
-            <div id="body">
+                </div>
+                </div>
+                <div id="body">
 
-    <div id="catheader">
+                    <div id="catheader">
 
-        <div id="catheadings">
-            <h3>Category-wise Summary</h3>
-            <h4>Select a transaction type to view the breakdown</h4>
+                        <div id="catheadings">
+                            <h3>Category-wise Summary</h3>
+                            <h4>Select a transaction type to view the breakdown</h4>
+                        </div>
+
+                        <div class="input-box">
+                            <select id="transaction-type" required>
+                                <option value="" disabled selected>Type</option>
+                                <option value="Income">Income</option>
+                                <option value="Expense">Expense</option>
+                                <option value="Saving">Saving</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div id="category-list"></div>
+
+
+                    <div id="category-summary">
+
+                        <div class="summary-item">
+                            <span>Total</span>
+                            <strong id="category-total">₹0.00</strong>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Highest Category</span>
+                            <strong id="highest-category">-</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div id="category-insight">
+                        <span>💡</span>
+                        <p id="insight-text">Select a transaction type to view an insight.</p>
+                    </div>
+
+                </div>
+            
         </div>
-
-        <div class="input-box">
-            <select id="transaction-type" requiredw>
-                <option value="" disabled selected>Type</option>
-                <option value="Income">Income</option>
-                <option value="Expense">Expense</option>
-                <option value="Saving">Saving</option>
-            </select>
-        </div>
-
-    </div>
-
-
-    <div id="category-list"></div>
-
-
-    <div id="category-summary">
-
-        <div class="summary-item">
-            <span>Total</span>
-            <strong id="category-total">₹0.00</strong>
-        </div>
-
-        <div class="summary-item">
-            <span>Highest Category</span>
-            <strong id="highest-category">-</strong>
-        </div>
-
-    </div>
-
-
-    <div id="category-insight">
-        <span>💡</span>
-        <p id="insight-text">Select a transaction type to view an insight.</p>
-    </div>
-
-</div>
-    </div>
-    </div>
     </div>
     <script src="Categories.js"></script>
     <script src="username.js"></script>

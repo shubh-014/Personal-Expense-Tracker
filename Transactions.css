@@ -19,6 +19,11 @@
     box-sizing: border-box;
 
 }
+#headings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 #recent-list {

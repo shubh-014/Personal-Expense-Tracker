@@ -10,7 +10,11 @@
     border-radius: 10px;
     box-sizing: border-box;
 }
-
+#headings{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 #catheader {
     display: flex;
     justify-content: space-between;
