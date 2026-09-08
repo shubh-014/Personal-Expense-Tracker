@@ -81,7 +81,9 @@
     color: #69778d;
     font-size: 13px;
     text-align: right;
-}@media (max-width: 700px) {
+}
+
+@media (max-width: 700px) {
 
     #body {
         padding: 20px;

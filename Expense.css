@@ -8,9 +8,19 @@
     box-sizing: border-box;
 
 }
-#menu-button{
-    display: none;
-}
+
+ #menu-button{
+    
+    margin-top: 4px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+   }
 
 #Header{
      display: flex;
@@ -161,6 +171,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 #Username{
     border-radius: 5%;
     width: 80%;
@@ -179,6 +190,10 @@ body {
 #title {
     padding: 10px;
     /* transform: scale(.5); */
+}
+
+#navbar-overlay{
+    display: none;
 }
 
 
@@ -282,7 +297,7 @@ body {
     gap: 10px;
     margin-bottom: 9px;
     color: #f2f4f8;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     padding-top: 15px;
 }
@@ -573,6 +588,41 @@ width: auto;
     font-size: 14px;
     font-weight: 600;
 }
+
+/* For desktop */
+@media (min-width: 950px) {
+
+    #transaction-form {
+        height: 140px;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1.4fr 1.4fr 1.2fr 1fr 0.7fr;
+        grid-template-rows: 25px 10px;
+        gap: 8px;
+    }
+   
+    .transaction-title {
+        grid-column: 1 / -1;
+    }
+    #menu-button{
+    display: none;
+}
+    .input-box {
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    #add-transaction{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px; 
+        height: 41px;
+        justify-content: center;
+}
+
+}
+/* For tablets */
 @media (max-width:950px) {
     .container{
     height: 124px;}
@@ -589,39 +639,12 @@ width: auto;
     }
     .i1{
     margin-top: 30px;
-   
 }
+ #Signout,#reset{
+    display: none;
+   }
 }
-
-@media (min-width: 950px) {
-
-    #transaction-form {
-        height: 140px;
-        padding: 15px;
-        display: grid;
-        grid-template-columns: 1.4fr 1.4fr 1.2fr 1fr 0.7fr;
-        grid-template-rows: 25px 10px;
-        gap: 8px;
-    }
-   
-    .transaction-title {
-        grid-column: 1 / -1;
-    }
-
-    .input-box {
-        width: 100%;
-        height: 40px;
-        margin-top: 20px;
-    }
-
-    #add-transaction{
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px; 
-        height: 41px;
-        justify-content: center;
-}
-}
+/* For mobile screens */
 @media (max-width: 640px) {
     #container {
         grid-template-columns: repeat(2, 1fr);
@@ -632,8 +655,5 @@ width: auto;
    #Signout,#reset{
     display: none;
    }
-   #menu-button{
-    display: block;
-   }
-    
+  
 }
