@@ -229,8 +229,27 @@ let myChart=new Chart(ctx,{
     }
 });
 renderRecentTransactions();
-document.getElementById("n2").onclick=function(){
-    document.getElementById("content").innerHTML=" ";
+let menuButton = document.getElementById("menu-button");
+let navbar = document.getElementById("navbar");
+let navbarOverlay = document.getElementById("navbar-overlay");
+
+menuButton.addEventListener("click", function () {
+
+    navbar.classList.toggle("open");
+    navbarOverlay.classList.toggle("open");
+
+});
+
+navbarOverlay.addEventListener("click", function () {
+
+    navbar.classList.remove("open");
+    navbarOverlay.classList.remove("open");
+
+});
+document.getElementById("mobile-reset").onclick = function () {
+    document.getElementById("reset").click();
 };
 
-
+document.getElementById("mobile-signout").onclick = function () {
+    document.getElementById("Signout").click();
+};
