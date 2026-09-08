@@ -8,6 +8,9 @@
     box-sizing: border-box;
 
 }
+.page{
+    padding-top:10px;
+}
 #mobile-buttons {
     display: none;
 }
@@ -110,14 +113,14 @@ body {
     top: 0;
     background-color: rgba(11, 15, 24);
     min-width: 230px;
-    height: 100vh;
+    height: 100dvh;
     border-right: 1px solid rgb(25, 29, 38);
 }
 
 #navcontain {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100dvh;
 }
 .active{
     background-color: rgba(19, 32, 56);
@@ -691,7 +694,7 @@ width: auto;
         right: 0;
 
         width: 250px;
-        height: 100vh;
+        height: 100dvh;
 
         min-width: 0;
 
@@ -718,7 +721,7 @@ width: auto;
         left: 0;
 
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
 
         z-index: 999;
 
@@ -875,6 +878,14 @@ width: auto;
     #container1,#container2{
         margin-bottom: -7px;
     }
-  
+  h1{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 16px;
+  }
+  #menu-button{
+    padding-left:30px
+  }
   
 }

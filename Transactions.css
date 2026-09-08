@@ -141,7 +141,7 @@
 
     display: none;
 
-    min-height: 70vh;
+    min-height: 70dvh;
 
     justify-content: center;
 
@@ -232,5 +232,12 @@
     #None img{
     width: 70px;
 }
-
+ h1{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 16px;
+  }
+ 
+  
 }
