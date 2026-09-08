@@ -1,3 +1,4 @@
+console.log("CATEGORIES JS LOADED");
 let menuButton = document.getElementById("menu-button");
 let navbar = document.getElementById("navbar");
 let navbarOverlay = document.getElementById("navbar-overlay");
