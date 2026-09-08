@@ -1,3 +1,16 @@
+let menuButton = document.getElementById("menu-button");
+let navbar = document.getElementById("navbar");
+let navbarOverlay = document.getElementById("navbar-overlay");
+
+menuButton.onclick = function () {
+    navbar.classList.add("open");
+    navbarOverlay.classList.add("open");
+};
+
+navbarOverlay.onclick = function () {
+    navbar.classList.remove("open");
+    navbarOverlay.classList.remove("open");
+};
 let type = document.getElementById("transaction-type");
 let categoryList = document.getElementById("category-list");
 
@@ -155,16 +168,3 @@ type.addEventListener("change", function () {
     });
 
 });
-let menuButton = document.getElementById("menu-button");
-let navbar = document.getElementById("navbar");
-let navbarOverlay = document.getElementById("navbar-overlay");
-
-menuButton.onclick = function () {
-    navbar.classList.add("open");
-    navbarOverlay.classList.add("open");
-};
-
-navbarOverlay.onclick = function () {
-    navbar.classList.remove("open");
-    navbarOverlay.classList.remove("open");
-};
