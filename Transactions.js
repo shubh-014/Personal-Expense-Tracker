@@ -69,10 +69,12 @@ let navbarOverlay = document.getElementById("navbar-overlay");
 
 menuButton.onclick = function () {
     navbar.classList.add("open");
+    document.body.classList.add("no-scroll");
     navbarOverlay.classList.add("open");
 };
 
 navbarOverlay.onclick = function () {
     navbar.classList.remove("open");
+    document.body.classList.remove("no-scroll");
     navbarOverlay.classList.remove("open");
 };

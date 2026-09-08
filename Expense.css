@@ -11,6 +11,9 @@
 .page{
     padding-top:10px;
 }
+body.no-scroll {
+    overflow: hidden;
+}
 #mobile-buttons {
     display: none;
 }
