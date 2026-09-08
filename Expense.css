@@ -611,6 +611,11 @@ width: auto;
     #container1,#container2{
         margin-bottom: -7px;
     }
-   
+   #Signout,#reset{
+    display: none;
+   }
+   #menu-button{
+    display: block;
+   }
     
 }
