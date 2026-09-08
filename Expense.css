@@ -70,7 +70,7 @@
 }
 
 h1{
-    font-size: 30px;
+    font-size: 26px;
 }
 h2{
     padding-top: 10px;
@@ -118,7 +118,7 @@ body {
 #navcontain {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
 }
 .active{
     background-color: rgba(19, 32, 56);
@@ -774,43 +774,30 @@ width: auto;
 
         flex-direction: column;
 
-        gap: 8px;
+        gap: 12px;
 
         margin-top: 25px;
+ 
+        margin: 20px 10px;;
 
         padding: 0;
-        transform: scale(.9);
     }
 
     #mobile-buttons button {
         display: flex;
-
+        border: .5px solid #132038 !important;
         align-items: center;
-
         gap: 14px;
-
         position: relative;
-
         width: 100%;
-
-        min-height: 65px;
-
-        padding: 8px 12px;
-
-        border: 1px solid transparent;
-
+        min-height: 40px;
+        padding: 0px 12px;
         border-radius: 12px;
-
         background: transparent;
-
         color: aliceblue;
-
         text-align: left;
-
         cursor: pointer;
-
         box-sizing: border-box;
-
         transition: 0.2s ease;
     }
 
@@ -835,17 +822,7 @@ width: auto;
         font-size: 22px;
     }
 
-    .reset-icon {
-        background-color: rgba(180, 35, 55, 0.35);
-
-        color: #ff5261;
-    }
-
-    .signout-icon {
-        background-color: rgba(80, 95, 120, 0.35);
-
-        color: aliceblue;
-    }
+    
 
 
     /* Text */
@@ -859,7 +836,7 @@ width: auto;
 
         flex: 1;
 
-        font-size: 14px;
+        font-size: 13px;
 
         font-weight: 600;
     }
@@ -871,6 +848,7 @@ width: auto;
 
         font-weight: 400;
     }
+    
 
 
     /* Arrow */
@@ -883,12 +861,9 @@ width: auto;
         font-weight: 300;
     }
 
-
-    /* Hover */
-
-    #mobile-reset:hover,
-    #mobile-signout:hover {
-        background-color: rgba(100, 25, 40, 0.45);
+    #mobile-reset:active,
+    #mobile-signout:active {
+        background-color: rgba(19, 32, 56);
     }
 
 }

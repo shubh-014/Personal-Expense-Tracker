@@ -247,9 +247,11 @@ navbarOverlay.addEventListener("click", function () {
 
 });
 document.getElementById("mobile-reset").onclick = function () {
+ 
     document.getElementById("reset").click();
 };
 
 document.getElementById("mobile-signout").onclick = function () {
     document.getElementById("Signout").click();
 };
+
