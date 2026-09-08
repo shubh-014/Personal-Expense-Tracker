@@ -120,7 +120,7 @@ let update=function(){
     let chartTotal=parseFloat(localStorage.getItem("total"));
     document.querySelector("#chart-center strong").innerHTML="Rs "+chartTotal.toFixed(2);
 };
-let renderRecentTransactions = function () {
+let renderRecentTransactions = function (){
 
     let recentTransactions = document.getElementById("recent-transactions");
 
@@ -131,6 +131,21 @@ let renderRecentTransactions = function () {
 
     let recent = transactions.slice(-5).reverse();
 
+
+    if (recent.length === 0) {
+
+        recentTransactions.innerHTML = `
+            <div id="recent-header">
+                <h3>Recent Transactions</h3>
+                <a href="Transactions.html">View All</a>
+            </div>
+            <div id="None">
+                <img src="none.png">
+                <div>
+                    No transactions yet
+                </div>
+            </div>
+        `;}else{
     recentTransactions.innerHTML = `
         <div id="recent-header">
             <h3>Recent Transactions</h3>
@@ -192,7 +207,8 @@ let renderRecentTransactions = function () {
 
         </div>
     `;
-};
+};}
+
 let ctx=document.getElementById("chart");
 let myChart=new Chart(ctx,{
     type:"doughnut",

@@ -1,23 +1,215 @@
-#None{
-    display: none;
-    height: 100%;
-    justify-content: center;
+#body {
+
+    width: auto;
+
+    height: auto;
+
+    min-height: 100px;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+    background-color: #0e192b;
+
+    border: 1px solid #1d2c43;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+}
+
+
+#recent-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.recent-item {
+
+    display: flex;
+
     align-items: center;
-}
-#table{
-    width: 100%;
-    border-collapse: collapse;
-}
-#table th{
-    text-align: left;
-    padding: 15px;
-    font-size: 20px;
-    border-bottom: 2px solid #1c2a3e;
-    margin-bottom: 100px;
-}
-#data td{
-    text-align: left;
-    padding: 15px;
-    font-size: 20px;
+
+    padding: 14px 0;
+
     border-bottom: 1px solid #1d2c43;
+
+}
+
+
+.recent-date {
+
+    width: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 25px;
+
+}
+
+
+.recent-date strong {
+
+    font-size: 25px;
+
+    color: aliceblue;
+
+}
+
+
+.recent-date span {
+
+    margin-top: 3px;
+
+    color: #69778d;
+
+    font-size: 11px;
+
+}
+
+
+.recent-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.recent-name {
+
+    color: aliceblue;
+
+    font-size: 20px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.recent-category {
+
+    color: #69778d;
+
+    font-size: 14px;
+
+}
+
+
+.recent-amount {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin-left: 0px;
+
+    white-space: nowrap;
+
+}
+
+
+#None {
+
+    display: none;
+
+    min-height: 70vh;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #69778d;
+
+    font-size: 13px;
+    flex-direction: column;
+
+}
+
+
+@media (max-width: 600px) {
+
+    #content {
+
+        margin: 15px;
+
+    }
+
+
+    #body {
+
+        padding: 20px;
+
+        margin: 25px 0;
+
+    }
+
+
+    .recent-date {
+
+        width: 50px;
+
+        margin-right: 10px;
+
+    }
+
+
+    .recent-date strong {
+
+        font-size: 18px;
+
+    }
+    .recent-date span {
+
+        font-size: 8px;
+
+    }
+
+
+    .recent-name {
+
+        font-size: 13px;
+
+    }
+
+
+    .recent-category {
+
+        font-size: 11px;
+
+    }
+
+
+    .recent-amount {
+
+        font-size: 13px;
+
+    }
+    #None img{
+    width: 70px;
+}
+
 }

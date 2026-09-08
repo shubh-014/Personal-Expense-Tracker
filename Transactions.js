@@ -1,30 +1,61 @@
-let count=0;let color="yellow";
-if(localStorage.getItem("total")=="0"){
-    document.getElementById("None").style.display="flex";
-    count=0;
+let transactions =
+    JSON.parse(localStorage.getItem("transactions")) || [];
+transactions = [...transactions].reverse();
+let transactionList =
+    document.getElementById("recent-list");
+let none =
+    document.getElementById("None");
+if (transactions.length === 0) {
+    none.style.display = "flex";
 }
-let transactions = JSON.parse(localStorage.getItem("transactions"));
-transactions=transactions.reverse();
-transactions.forEach(function(transaction, index) {
-    let date = new Date(transaction.date);
-    let formattedDate =
-        date.getDate() + "/" +
-        (date.getMonth() + 1) + "/" +
-        date.getFullYear();
-    if(transaction.type=="Income"){
-        color="green";}
-        else if(transaction.type=="Expense"){
-        color="red";
-        } else color="yellow";
-    document.getElementById("data").innerHTML += `
-        <tr>
-            <td>${formattedDate}</td>
-            <td>${transaction.description}</td>
-            <td style="color:${color}">₹${transaction.amount}</td>
-            <td>${transaction.type}</td>
-            <td>${transaction.category}</td>
-        </tr>
-    `;
+else {
+    none.style.display = "none";
+    transactions.forEach(function(transaction) {
+        let color;
+        if (transaction.type === "Income") {
+            color = "green";
+        }
+        else if (transaction.type === "Expense") {
+            color = "red";
+        }
+        else {
+            color = "yellow";
+        }
+        let date = new Date(transaction.date);
+        let day = date.getDate();
+        let month = date.toLocaleString("en-US", {
+            month: "short"
+        }).toUpperCase();
+        let year = date.getFullYear();
 
-    }
-);
+
+        transactionList.innerHTML += `
+            <div class="recent-item">
+                <div class="recent-date">
+                    <strong>${day}</strong>
+                    <span>${month} ${year}</span>
+                </div>
+
+                <div class="recent-info">
+
+                    <div class="recent-name">
+                        ${transaction.description}
+                    </div>
+                    <div class="recent-category">
+                        ${transaction.type} • ${transaction.category}
+                    </div>
+                </div>
+                <div
+                    class="recent-amount"
+                    style="color:${color}"
+                >
+                    ₹${Number(transaction.amount).toFixed(2)}
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
