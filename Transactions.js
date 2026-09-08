@@ -59,3 +59,7 @@ else {
     });
 
 }
+
+document.getElementById("add-transaction").onclick=function(){
+    window.location.href="index.html";
+}
