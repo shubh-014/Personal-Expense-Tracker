@@ -233,19 +233,18 @@ let menuButton = document.getElementById("menu-button");
 let navbar = document.getElementById("navbar");
 let navbarOverlay = document.getElementById("navbar-overlay");
 
-menuButton.addEventListener("click", function () {
+menuButton.onclick = function () {
+    navbar.classList.add("open");
+    document.body.classList.add("no-scroll");
+    navbarOverlay.classList.add("open");
+};
 
-    navbar.classList.toggle("open");
-    navbarOverlay.classList.toggle("open");
-
-});
-
-navbarOverlay.addEventListener("click", function () {
-
+navbarOverlay.onclick = function () {
     navbar.classList.remove("open");
+    document.body.classList.remove("no-scroll");
     navbarOverlay.classList.remove("open");
+};
 
-});
 document.getElementById("mobile-reset").onclick = function () {
  
     document.getElementById("reset").click();
