@@ -10,7 +10,7 @@
 
     margin: 20px 0;
 
-    background-color: #0e192b;
+    background-color: #0c1728;
 
     border: 1px solid #1d2c43;
 
@@ -159,7 +159,7 @@
     margin-top: 24px;
     border: none;
     border-radius: 7px;
-    background: linear-gradient(90deg, #5155ff, #4b58ee);
+    background: linear-gradient(135deg, #315cc9, #183b91);
     color: white;
     font-size: 10px;
     font-weight: 600;
