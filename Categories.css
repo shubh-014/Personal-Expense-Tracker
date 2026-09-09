@@ -1,11 +1,15 @@
+.page{
+    padding-top:10px;
+    background-color: #0b121e;
+     height: 100dvh;
+}
+
 #body {
     width: auto;
     height: auto;
     min-height: 350px;
     padding: 30px;
-    margin: 4p
-    x 0px;
-    background-color: #0c1728;
+    margin: 4px 0px;
     border: 1px solid #1d2c43;
     border-radius: 10px;
     box-sizing: border-box;

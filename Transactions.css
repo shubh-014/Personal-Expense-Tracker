@@ -2,7 +2,7 @@
 
     width: 200dvh;
 
-    height: 100dvh;
+    height: auto;
 
     min-height: 100px;
 
@@ -10,14 +10,16 @@
 
     margin: 20px 0;
 
-    background-color: #0c1728;
-
     border: 1px solid #1d2c43;
 
     border-radius: 10px;
 
     box-sizing: border-box;
 
+}
+.page{
+    background-color: #0b121e;
+    height: 100dvh;
 }
 #headings{
     display: flex;
