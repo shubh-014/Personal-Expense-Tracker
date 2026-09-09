@@ -136,8 +136,8 @@ let update=function(){
         chartTotal=chartTotal/1000;
         abb="k"
     }
-    
-    chartbal="Rs "+chartTotal.toFixed(2)+abb;
+
+    chartbal="Rs "+((Math.floor(chartTotal*100))/100).toFixed(2)+abb;
     localStorage.setItem("chart-balance",chartbal)
     
 };

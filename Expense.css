@@ -695,8 +695,19 @@ width: auto;
 }
 
 /* For desktop */
-@media (min-width: 1050px) {
-
+@media (min-width: 980px) {
+@media (max-width: 1080px) {
+    #buttons{
+        gap:10px;
+    }
+    #reset,#Signout{
+        padding: 8px;
+    }
+    .amt{
+        font-size: medium;
+    }
+    
+}
     #transaction-form {
         height: 140px;
         padding: 15px;
@@ -726,7 +737,7 @@ width: auto;
         justify-content: center;
 }}
 /* For tablets */
-@media (max-width:1050px) {
+@media (max-width:979px) {
 
     .container {
         height: 124px;
