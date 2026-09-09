@@ -2,6 +2,7 @@ let total = parseFloat(localStorage.getItem("total") || 0.0);
 let totalExpense = parseFloat(localStorage.getItem("expenses") || 0.0);
 let totalIncome = parseFloat(localStorage.getItem("income") || 0.0);
 let totalSaving = parseFloat(localStorage.getItem("saving") || 0.0);
+let chartbal = localStorage.getItem("chart-balance") || "Rs 0.00";
 document.getElementById("total-balance").innerHTML = "Rs " + total.toFixed(2);
 document.getElementById("total-expenses").innerHTML = "Rs " + totalExpense.toFixed(2);
 document.getElementById("total-income").innerHTML = "Rs " + totalIncome.toFixed(2);
@@ -29,6 +30,7 @@ document.getElementById("add-transaction").addEventListener("click", function ()
     };
     transactions.push(transaction);
     localStorage.setItem("transactions",JSON.stringify(transactions));
+    document.querySelector("#chart-center strong").innerHTML=chartbal;
     renderRecentTransactions();
 });
 let type=document.getElementById("transaction-type");
@@ -71,8 +73,11 @@ document.getElementById("reset").addEventListener("click",function(){
     totalExpense=0.0;
     totalSaving=0.0;
     update();
+    chartbal="Rs 0.00"
+    localStorage.removeItem("chart-balance");
     localStorage.removeItem("transactions");
     renderRecentTransactions();
+    document.querySelector("#chart-center strong").innerHTML = chartbal;
 });
 let expense=function(transactionAmount){
     if(transactionAmount>total){
@@ -118,7 +123,23 @@ let update=function(){
     myChart.data.datasets[0].data=[totalExpense,totalIncome,totalSaving];
     myChart.update();
     let chartTotal=parseFloat(localStorage.getItem("total"));
-    document.querySelector("#chart-center strong").innerHTML="Rs "+chartTotal.toFixed(2);
+    let abb="";
+    if(chartTotal>10000000){
+        chartTotal=chartTotal/10000000;
+        abb="cr"
+    }
+    else if(chartTotal>100000){
+        chartTotal=chartTotal/100000;
+        abb="L"
+    }
+    else if(chartTotal>1000){
+        chartTotal=chartTotal/1000;
+        abb="k"
+    }
+    
+    chartbal="Rs "+chartTotal.toFixed(2)+abb;
+    localStorage.setItem("chart-balance",chartbal)
+    
 };
 let renderRecentTransactions = function (){
 
@@ -229,6 +250,7 @@ let myChart=new Chart(ctx,{
     }
 });
 renderRecentTransactions();
+document.querySelector("#chart-center strong").innerHTML = chartbal;
 let menuButton = document.getElementById("menu-button");
 let navbar = document.getElementById("navbar");
 let navbarOverlay = document.getElementById("navbar-overlay");

@@ -14,36 +14,37 @@ window.addEventListener("load", function () {
         username.charAt(0).toUpperCase();
 
 
-   function signOut() {
+    function signOut() {
 
-    if (confirm("Are you sure you wish to sign out?")) {
-        localStorage.removeItem("username");
-        
-        let newUsername = prompt("Whats your good name?");
-        
-        if (newUsername == null || newUsername === "") {
-            newUsername = "User";
+        if (confirm("Are you sure you wish to sign out?")) {
+            localStorage.removeItem("username");
+            
+            localStorage.removeItem("chart-balance");
+            let newUsername = prompt("Whats your good name?");
+
+            if (newUsername == null || newUsername === "") {
+                newUsername = "User";
+            }
+
+            localStorage.setItem("username", newUsername);
+
+            document.getElementById("user-name").innerHTML =
+                newUsername.toUpperCase();
+
+            document.getElementById("user-avatar").innerHTML =
+                newUsername.charAt(0).toUpperCase();
+            localStorage.removeItem("transactions");
+
+            localStorage.removeItem("total");
+
+            localStorage.removeItem("income");
+
+            localStorage.removeItem("expenses");
+
+            localStorage.removeItem("saving");
+            location.reload();
         }
-        
-        localStorage.setItem("username", newUsername);
-        
-        document.getElementById("user-name").innerHTML =
-        newUsername.toUpperCase();
-        
-        document.getElementById("user-avatar").innerHTML =
-        newUsername.charAt(0).toUpperCase();
-        localStorage.removeItem("transactions");
-
-localStorage.removeItem("total");
-
-localStorage.removeItem("income");
-
-localStorage.removeItem("expenses");
-
-localStorage.removeItem("saving");
-location.reload();
     }
-}
 
 
     // Normal dashboard Sign out button
@@ -72,14 +73,11 @@ location.reload();
         mobileReset.onclick = function () {
 
             if (confirm("Are you sure you wish to clear all past records?")) {
+                document.getElementById("reset").click();
+            
+        }
 
-                localStorage.removeItem("transactions");
-
-                location.reload();
-
-            }
-
-        };
+    };
 
     }
 
